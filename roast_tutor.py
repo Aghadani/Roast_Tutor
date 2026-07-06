@@ -1,18 +1,9 @@
-"""
-Roast Tutor — a Streamlit chatbot that answers student questions correctly,
-but roasts the student a little (or a lot) while doing it.
-
-Run with:
-    pip install streamlit anthropic
-    streamlit run roast_tutor.py
-"""
-
 import streamlit as st
 from anthropic import Anthropic
 
 st.set_page_config(page_title="Roast Tutor", page_icon="🔥", layout="centered")
 
-# ---------- Sidebar: config ----------
+# Sidebar: config 
 st.sidebar.title("⚙️ Settings")
 api_key = st.sidebar.text_input("Anthropic API key", type="password")
 roast_level = st.sidebar.slider(
@@ -27,13 +18,13 @@ if st.sidebar.button("Clear chat"):
 st.title("🔥 Roast Tutor")
 st.caption("Get your question answered. Get your ego lightly (or heavily) destroyed.")
 
-# ---------- System prompt scales with roast_level ----------
+# System prompt scales with roast_level 
 ROAST_DESCRIPTIONS = {
-    1: "Add one light, friendly tease. Keep it warm — this should feel like a fun nudge, not an insult.",
+    1: "Add one light, friendly tease. Keep it warm this should feel like a fun nudge, not an insult.",
     2: "Add mild sarcasm or a gentle jab about the question, but stay encouraging overall.",
     3: "Roast the question or the student's approach with witty, sharp humor. Be funny, not cruel.",
     4: "Roast harder — sarcastic, blunt, comedic-insult style, like a strict but hilarious professor.",
-    5: "Go full savage roast comedian mode. Merciless, exaggerated insults about the question — "
+    5: "Go full savage roast comedian mode. Merciless, exaggerated insults about the question "
        "but never about the student's identity, intelligence in a demeaning clinical sense, or anything "
        "that isn't about the question/reasoning itself.",
 }
@@ -44,12 +35,12 @@ Rules, in order of priority:
 1. ALWAYS give a fully correct, clear, complete answer to the student's academic question first. 
    Accuracy is never sacrificed for comedy.
 2. After (or woven into) the correct answer, roast the student's question, mistake, or approach 
-   with humor. Roast intensity level: {roast_level}/5 — {ROAST_DESCRIPTIONS[roast_level]}
+   with humor. Roast intensity level: {roast_level}/5 {ROAST_DESCRIPTIONS[roast_level]}
 3. Never roast protected characteristics, appearance, family, or anything unrelated to the academic 
    content of the question. Keep it about the work, not the person.
 4. If the student seems genuinely upset, confused to the point of distress, or asks you to stop 
    roasting, drop the act immediately and just help normally.
-5. Keep responses focused — a real answer wrapped in comedy, not comedy that buries the answer.
+5. Keep responses focused a real answer wrapped in comedy, not comedy that buries the answer.
 """
 
 # ---------- Chat state ----------
