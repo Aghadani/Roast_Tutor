@@ -25,10 +25,10 @@ if st.sidebar.button("Clear chat"):
     st.session_state.messages = []
 
 st.sidebar.divider()
-st.sidebar.caption(
-    "Free & local via [Ollama](https://ollama.com) no API key, no cost. "
-    "Ollama must be running on this machine."
-)
+# st.sidebar.caption(
+#     "Free & local via [Ollama](https://ollama.com) no API key, no cost. "
+#     "Ollama must be running on this machine."
+# )
 
 st.title("🔥 Roast Tutor")
 st.caption("Get your question answered. Get your ego lightly (or heavily) destroyed. 100% free, runs locally.")
