@@ -1,12 +1,12 @@
-# Roast Tutor (Free / Local Version)
+# Roast Tutor
 
-A Streamlit chatbot that answers student questions correctly — then roasts the
+A Streamlit chatbot that answers student questions correctly then roasts the
 question (not the student) with adjustable intensity. Runs entirely on your
-own machine via [Ollama](https://ollama.com) — no API key, no cost.
+own machine via [Ollama](https://ollama.com) no API key, no cost.
 
 ## Files
-- `roast_tutor.py` — the app
-- `requirements.txt` — Python dependencies
+- `roast_tutor.py` the app
+- `requirements.txt` Python dependencies
 
 ## Setup
 
@@ -47,10 +47,10 @@ Opens at http://localhost:8501.
 ## Notes / trade-offs vs. paid API
 - **Cost:** $0, runs entirely offline once the model is downloaded.
 - **Quality:** noticeably below Claude/GPT-4-class models, especially on harder
-  academic questions — verify accuracy before trusting it for real coursework.
+  academic questions verify accuracy before trusting it for real coursework.
 - **Speed:** depends entirely on your hardware (CPU/GPU/RAM); can be slow on
   low-end machines.
 - **Roasting always targets the question/reasoning**, never identity or
-  anything unrelated to the academic content — but a local small model is less
+  anything unrelated to the academic content but a local small model is less
   reliable at following that instruction consistently than a larger hosted
   model, so keep an eye on outputs, especially at intensity 4-5.
