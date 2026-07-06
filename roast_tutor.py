@@ -34,7 +34,7 @@ st.sidebar.divider()
 # )
 
 st.title("🔥 Roast Tutor")
-st.caption("Get your question answered. Get your ego lightly (or heavily) destroyed. Free, cloud-hosted.")
+st.caption("Get your question answered. Get your ego lightly (or heavily) destroyed.")
 
 #System prompt scales with roast_level
 ROAST_DESCRIPTIONS = {
